@@ -2,6 +2,15 @@ body {
   background-color: #306D85;
 }
 
+
+.scale-wrapper {
+  transform: scale(0.667); /* scale down to 1 / 1.5 */
+  /* Используйте оригинальный размер контейнера для предотвращения сдвига */
+   /* позволяет держать верхний левый угол на месте */
+}
+
+
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
