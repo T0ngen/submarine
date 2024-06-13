@@ -20,6 +20,8 @@ function App() {
       }, 1000);
 
       return () => clearInterval(expandInterval);
+    }else{
+      console.log("Telegram not found");
     }
   }, []);
   
