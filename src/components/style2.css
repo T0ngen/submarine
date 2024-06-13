@@ -2,6 +2,13 @@ body {
   background-color: #306D85;
 }
 
+html, body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 
 .scale-wrapper {
   transform: scale(0.667); /* scale down to 1 / 1.5 */
