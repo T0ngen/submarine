@@ -11,15 +11,9 @@ function App() {
       const tg = window.Telegram.WebApp;
 
       tg.expand();
-      tg.isClosingConfirmationEnabled = true;
+     
 
-      const expandInterval = setInterval(() => {
-        if (!tg.isExpanded) {
-          tg.expand();
-        }
-      }, 1000);
-
-      return () => clearInterval(expandInterval);
+      
     }
   }, []);
   
