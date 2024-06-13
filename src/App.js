@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import './App.css';
 import Submarine from './components/submarine';
 
@@ -14,4 +14,3 @@ function App() {
 
 export default App;
 
-//

@@ -1,6 +1,5 @@
-// src/Submarine.js
 import React from 'react';
-import './submarine.css';
+import './style2.css';
 
 const Submarine = () => {
   return (
