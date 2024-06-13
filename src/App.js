@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import Submarine from './components/submarine';
 
@@ -6,14 +6,22 @@ import Submarine from './components/submarine';
 
 function App() {
   
-  if (window.Telegram) {
-    const tg = window.Telegram.WebApp;
+  useEffect(() => {
+    if (window.Telegram) {
+      const tg = window.Telegram.WebApp;
 
-    tg.expand();
-    tg.isClosingConfirmationEnabled = true;
+      tg.expand();
+      tg.isClosingConfirmationEnabled = true;
 
-    
-  }
+      const expandInterval = setInterval(() => {
+        if (!tg.isExpanded) {
+          tg.expand();
+        }
+      }, 1000);
+
+      return () => clearInterval(expandInterval);
+    }
+  }, []);
   
   return (
     <div className="App">
