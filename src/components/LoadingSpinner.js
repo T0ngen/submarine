@@ -1,6 +1,6 @@
 // components/LoadingSpinner.js
 import React from 'react';
-import './LoadingSpinner.css'; // Убедитесь, что CSS-файл существует
+import './LoadingSpinner.css';
 
 const LoadingSpinner = () => {
   return (

@@ -1,10 +1,14 @@
 import React from 'react';
 import './style2.css';
+import LeaderBoard from './LeaderBoard/LeaderBoard';
 
 const Submarine = () => {
   return (
-
+    
+    <div>
+    
     <div className="sea">
+    <LeaderBoard/>
      <div className="scale-wrapper">
        <div className="circle-wrapper">
          <div className="bubble"></div>
@@ -25,7 +29,7 @@ const Submarine = () => {
        </div>
      </div>
    </div>
-
+   </div>
   );
 }
 

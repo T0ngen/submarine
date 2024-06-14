@@ -1,0 +1,62 @@
+.leader-board {
+    background-color: bisque;
+    width: calc(100% - 30px);  
+    height: calc(100px - 30px); 
+    position: absolute;
+    margin: 15px;              
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .leader-board-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .leader-board-title{
+    display: flex;
+  }
+  .smallLogo {
+    margin-left: 10px;
+    width: 50px;
+  }
+  .smallLogo-medal{
+    width: 40px;
+  }
+  .name-section {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; /* Размещаем элементы в колонку */
+    margin-left: 10px; /* Отступ между логотипом и именем */
+  }
+  
+  .name {
+    margin: 0; /* Убираем стандартные отступы */
+    
+  }
+  
+  .subtitle {
+    margin: 0; /* Убираем стандартные отступы */
+    font-size: 0.8em; /* Можно изменить размер текста, если необходимо */
+    color: #555; /* Добавить цвет для стилизации */
+  }
+  
+  .leader-board-awards {
+    margin-right: 15px; 
+  }
+
+  .medal-section{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link-medal{
+    color: #555;
+  }
+
+  .link-leaderboard{
+    color: rgba(0, 191, 255);
+  }
