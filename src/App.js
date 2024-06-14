@@ -1,11 +1,18 @@
 // App.js
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Submarine from './components/submarine.js';
+import Submarine from './components/submarine';
 import LoadingSpinner from './components/LoadingSpinner';
 
 function App() {
   const [loading, setLoading] = useState(true);
+
+  const showSpinner = (delay) => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, delay);
+  };
 
   useEffect(() => {
     if (window.Telegram) {
@@ -14,18 +21,21 @@ function App() {
     }
 
     const handleWindowLoad = () => {
-      // Установим таймер на 0.5 секунд, прежде чем скрыть спиннер
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
+      showSpinner(1000); // Показываем спиннер с задержкой 0.5 секунд
     };
 
     // Слушаем событие загрузки окна
     window.addEventListener('load', handleWindowLoad);
 
-    // Убираем слушатель события при размонтировании компонента
+    // Слушаем событие перед перезагрузкой окна
+    window.addEventListener('beforeunload', () => {
+      showSpinner(1000); // Показываем спиннер с задержкой 0.5 секунд
+    });
+
+    // Очищаем слушатели событий при размонтировании компонента
     return () => {
       window.removeEventListener('load', handleWindowLoad);
+      window.removeEventListener('beforeunload', handleWindowLoad);
     };
   }, []);
 
