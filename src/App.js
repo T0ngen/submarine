@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import Submarine from './components/submarine';
-// import LoadingSpinner from './components/LoadingSpinner';
+import LoadingSpinner from './components/LoadingSpinner';
 
 function App() {
   const [loading, setLoading] = useState(true);
