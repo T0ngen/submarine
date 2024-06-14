@@ -43,6 +43,10 @@ const LeaderBoard = () => {
           <h3 className='name'>{userName}</h3>
           <a className='link-leaderboard' href="URL-ссылки">LeaderBoard</a>
         </div>
+        {/* Добавляем отображение строки URL */}
+        <div className='url-section'>
+          <p>Photo URL: {userPhotoUrl}</p>
+        </div>
       </div>
       <div className="leader-board-awards">
         <div className='medal-section'>
