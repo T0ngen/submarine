@@ -1,24 +1,35 @@
 import { useEffect, useState } from 'react';
 import './LeaderBoard.css';
-import logo from '../images/logo.png';
-import medal from '../images/medal-bronze.png';
+import logo from '../images/logo.png'; // Путь до логотипа по умолчанию
+import medal from '../images/medal-bronze.png'; // Путь до медали
 
 const LeaderBoard = () => {
   const [userName, setUserName] = useState('Guest');
   const [userPhotoUrl, setUserPhotoUrl] = useState('');
 
   useEffect(() => {
-    // Check if Telegram WebApp is available
+    // Проверяем доступность Telegram WebApp
     if (window.Telegram && window.Telegram.WebApp) {
       const tg = window.Telegram.WebApp;
       const user = tg.initDataUnsafe.user;
 
+      // Логируем данные для отладки
+      console.log('Telegram WebApp user data:', user);
+
+      // Проверяем, есть ли данные пользователя
       if (user) {
+        // Устанавливаем имя пользователя
         setUserName(user.first_name || 'Guest');
+        
+        // Устанавливаем URL фото пользователя или логотип по умолчанию
         setUserPhotoUrl(user.photo_url || logo);
       } else {
-        setUserPhotoUrl(logo); // Default photo if user data is not available
+        // Используем логотип по умолчанию, если данные пользователя не найдены
+        setUserPhotoUrl(logo); 
       }
+    } else {
+      // Используем логотип по умолчанию, если Telegram WebApp недоступен
+      setUserPhotoUrl(logo);
     }
   }, []);
 
