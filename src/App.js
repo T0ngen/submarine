@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Submarine from './components/submarine';
 import LoadingSpinner from './components/LoadingSpinner';
