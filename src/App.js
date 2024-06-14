@@ -4,7 +4,7 @@ import Submarine from './components/submarine';
 // import LoadingSpinner from './components/LoadingSpinner';
 
 function App() {
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (window.Telegram) {
@@ -12,13 +12,13 @@ function App() {
       tg.expand();
     }
 
-    // // Функция, которая будет вызвана, когда страница полностью загрузится
-    // const handleWindowLoad = () => {
-    //   setLoading(false);
-    // };
+    // Функция, которая будет вызвана, когда страница полностью загрузится
+    const handleWindowLoad = () => {
+      setLoading(false);
+    };
 
     // // Слушаем событие загрузки страницы
-    // window.addEventListener('load', handleWindowLoad);
+    window.addEventListener('load', handleWindowLoad);
 
     // // Очистка слушателя при размонтировании компонента
     // return () => {
@@ -28,8 +28,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* {loading ? <LoadingSpinner /> : } */}
-      <Submarine />
+      {loading ? <LoadingSpinner /> :<Submarine /> }
+      
     </div>
   );
 }
