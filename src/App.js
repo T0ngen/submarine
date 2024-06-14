@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Submarine from './components/submarine';
-import LoadingSpinner from './components/LoadingSpinner';
+// import LoadingSpinner from './components/LoadingSpinner';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (window.Telegram) {
@@ -12,23 +12,24 @@ function App() {
       tg.expand();
     }
 
-    // Функция, которая будет вызвана, когда страница полностью загрузится
-    const handleWindowLoad = () => {
-      setLoading(false);
-    };
+    // // Функция, которая будет вызвана, когда страница полностью загрузится
+    // const handleWindowLoad = () => {
+    //   setLoading(false);
+    // };
 
-    // Слушаем событие загрузки страницы
-    window.addEventListener('load', handleWindowLoad);
+    // // Слушаем событие загрузки страницы
+    // window.addEventListener('load', handleWindowLoad);
 
-    // Очистка слушателя при размонтировании компонента
-    return () => {
-      window.removeEventListener('load', handleWindowLoad);
-    };
+    // // Очистка слушателя при размонтировании компонента
+    // return () => {
+    //   window.removeEventListener('load', handleWindowLoad);
+    // };
   }, []);
 
   return (
     <div className="App">
-      {loading ? <LoadingSpinner /> : <Submarine />}
+      {/* {loading ? <LoadingSpinner /> : } */}
+      <Submarine />
     </div>
   );
 }
