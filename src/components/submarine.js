@@ -1,6 +1,8 @@
 import React from 'react';
 import './style2.css';
 import LeaderBoard from './LeaderBoard/LeaderBoard';
+import MenuButtons from './menuButtons/menuButtons';
+
 
 const Submarine = () => {
   return (
@@ -29,6 +31,7 @@ const Submarine = () => {
        </div>
      </div>
    </div>
+   <MenuButtons/>
    </div>
   );
 }

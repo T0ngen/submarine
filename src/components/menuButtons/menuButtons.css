@@ -1,0 +1,8 @@
+.menu-block{
+    width: calc(100% - 30px);  
+    height: calc(100px - 30px); 
+    position: absolute;
+    background-color: aqua;
+    bottom: 40px;  /* Отступ в 20 пикселей от низа */
+    margin: 15px;
+}
