@@ -1,32 +1,60 @@
 .menu-block {
     width: calc(100% - 40px); /* Ширина блока */
-    height: calc(100px - 30px); /* Высота блока с учетом внутреннего отступа */
     position: absolute;
-    background-color: aqua;
-    bottom: 40px; /* Отступ от нижнего края */
+    bottom: 40px; 
     margin: 15px;
+    background-color: #0056b3;
     display: flex;
-    justify-content: space-between; /* Разделение пространства между кнопками */
-    padding: 15px; /* Внутренние отступы блока */
-    box-sizing: border-box; /* Учитываем padding в общей ширине и высоте блока */
-    
+    border-radius: 15px;
 }
 
 .menu-button {
-    flex: 1; /* Кнопки растягиваются для равномерного заполнения пространства */
-    margin: 0 5px; /* Чтобы кнопки не касались друг друга и боковых краев блока */
-    height: 100%; /* Кнопки занимают всю высоту родительского блока */
-    background-color: aqua;
-    border: none;
-    color: white;
-    font-size: 1rem;
+    width: calc(25% - 10px);
+    margin: 5px;
+    padding: 10px;
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;  /* Прячем текст, который не помещается */
+    text-overflow: ellipsis; /* Добавляем "три точки" если текст не помещается */
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+    font-size: 1rem; /* Базовый размер шрифта */
+    
+}
+
+/* Добавляем белый правый бордюр всем элементам, кроме последнего */
+.menu-button:not(:last-child) {
+    border-right: 1px solid #ffffff;
 }
 
 .menu-button:hover {
-    background-color: #0056b3;
+    background-color: #004085;
+}
+
+/* Медиа-запросы для адаптации текста при уменьшении экрана */
+@media (max-width: 1200px) {
+    .menu-button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu-button {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        font-size: 0.7rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu-button {
+        font-size: 0.6rem;
+        padding: 6px;
+    }
 }

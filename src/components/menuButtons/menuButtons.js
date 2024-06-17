@@ -6,10 +6,10 @@ import React from 'react';
 const MenuButtons = () => {
     return (
         <div className="menu-block">
-            <button className="menu-button">Заработать</button>
-            <button className="menu-button">Улучшения</button>
-            <button className="menu-button">Улучшения</button>
-            <button className="menu-button">Друзья</button>
+            <div className="menu-button">Заработать</div>
+            <div className="menu-button">Улучшения</div>
+            <div className="menu-button">Улучшения</div>
+            <div className="menu-button">Друзья</div>
         </div>
     );
 };
