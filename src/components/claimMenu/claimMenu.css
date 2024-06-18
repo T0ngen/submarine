@@ -62,7 +62,7 @@
 
 .info_maining{
     display: flex;
-    align-items: center;
+    
     
 }
 
@@ -70,25 +70,32 @@
     margin-right: 10px;
     font-weight: 800;
     color: slategray;
-    margin-bottom: 40px;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 17px;
 }
 .subma-maining2{
     font-weight: 900;
     font-size: 25px;
-    margin-bottom: 50px;
-    margin-right: 50px;
+    margin: 0;
+    margin-right: 30px; 
+    margin-top: 15px;
+    
     
 }
 
 .info_maining2{
     display: flex;
+    
+    
 }
 
 .logo-crypto2{
     width: 40px;
     height: 40px;
-    margin-top: 4px;
-    margin-bottom: 30px;
+    
+    
+    margin-top: 10px;
     
    
 }

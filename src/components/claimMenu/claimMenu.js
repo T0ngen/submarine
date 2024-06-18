@@ -28,7 +28,7 @@ const ClaimMenu = () => {
             <img className='logo-crypto2' src={logo} alt={"name"} />
                <div className='info_maining2'>
                
-               <p className='subma-maining2'>0.00 </p>
+               <h3 className='subma-maining2'>0.00 </h3>
                </div>
             </div>
          </div>
