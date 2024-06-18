@@ -10,9 +10,9 @@ const ClaimMenu = () => {
             <img className='logo-crypto' src={logo} alt={"name"} />
             </div>
             <div className='claim-block-text'>
-               <p>Доступно:</p>
-               <p>0.0000 $SUBMA</p>
-               <p>сгорят через: 00:00:00</p>
+               <p className='info-about-claim'>Доступно:</p>
+               <p className='text-amount-to-claim'>0.0000 $SUBMA</p>
+               <p className='claim-text-time'>сгорят через: 00:00:00</p>
             </div>
             <div>
                <div className='mini-claim-block'>
