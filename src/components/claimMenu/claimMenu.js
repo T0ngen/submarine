@@ -19,7 +19,18 @@ const ClaimMenu = () => {
                   <h4 className='mini-claim-block-text'>Claim $SUBMA</h4>
                </div>
             </div>
+            
          </div>
+            <div className='info_maining'>
+            <div>
+            <p className='subma-maining'>$SUBMA намайнено: </p>
+            </div>
+            <img className='logo-crypto2' src={logo} alt={"name"} />
+               <div className='info_maining2'>
+               
+               <p className='subma-maining2'>0.00 </p>
+               </div>
+            </div>
          </div>
       </div>
    );
