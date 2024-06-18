@@ -4,6 +4,7 @@ import LeaderBoard from './LeaderBoard/LeaderBoard';
 import MenuButtons from './menuButtons/menuButtons';
 // import ClaimMenu from './claimMenu/claimMenu';
 import TextClaimMenu from './textClaimMenu/textClaimMenu';
+import ClaimMenu from './claimMenu/claimMenu';
 const Submarine = () => {
   return (
     
@@ -30,6 +31,7 @@ const Submarine = () => {
          </div>
        </div>
        <TextClaimMenu/>
+       <ClaimMenu/>
      </div>
     
    </div>
