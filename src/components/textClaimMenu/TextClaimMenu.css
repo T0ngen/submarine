@@ -1,0 +1,28 @@
+/*.claimtext-block class remains the same */
+.claimtext-block {
+    padding-top: 10px;
+    width: 100%;
+    height: 150px;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
+}
+
+.mining-text::before {
+    content: '♻︎'; /* Example using Unicode */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.mining-text {
+    margin: 0; /* Reset margin to ensure centering works correctly */
+    margin-top: 10px;
+    font-size: 25px;
+}
+.mining-score{
+    font-size: 35px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+
+
+}

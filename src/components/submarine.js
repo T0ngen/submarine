@@ -2,8 +2,8 @@ import React from 'react';
 import './style2.css';
 import LeaderBoard from './LeaderBoard/LeaderBoard';
 import MenuButtons from './menuButtons/menuButtons';
-
-
+// import ClaimMenu from './claimMenu/claimMenu';
+import TextClaimMenu from './textClaimMenu/textClaimMenu';
 const Submarine = () => {
   return (
     
@@ -29,8 +29,11 @@ const Submarine = () => {
            </div>
          </div>
        </div>
+       <TextClaimMenu/>
      </div>
+    
    </div>
+  
    <MenuButtons/>
    </div>
   );
