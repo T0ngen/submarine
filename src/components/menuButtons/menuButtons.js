@@ -9,8 +9,8 @@ const MenuButtons = () => {
         <div className="menu-block">
             <div className="menu-button">
                 <div className="menu-button-content">
-                    <CurrencyExchangeIcon color="disabled" />
-                    <p className='text-buttons'>Заработать</p>
+                    <CurrencyExchangeIcon color="enabled" />
+                    <p className='text-buttons active'>Заработать</p>
                 </div>
             </div>
             <div className="menu-button">

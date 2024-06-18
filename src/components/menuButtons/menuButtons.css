@@ -72,3 +72,7 @@
     }
 }
 
+.active{
+    color: #fff;
+    font-weight: 900;
+}
